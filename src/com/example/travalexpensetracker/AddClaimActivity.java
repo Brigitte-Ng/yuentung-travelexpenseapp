@@ -44,6 +44,8 @@ public class AddClaimActivity extends Activity {
 
         Button save = (Button) findViewById(R.id.saveclaim);
         Button submit = (Button) findViewById(R.id.submitclaim);
+        
+        status.setText("in progress");
 
         mRowId = (savedInstanceState == null) ? null :
             (Long) savedInstanceState.getSerializable(DatabaseAdapter.KEY_ROWID);
@@ -59,7 +61,7 @@ public class AddClaimActivity extends Activity {
             public void onClick(View view) {
                 setResult(RESULT_OK);
                 finish();
-                status.setText("in progress");
+                //status.setText("in progress");
                 //updateClaim();
             	Intent intent = new Intent(AddClaimActivity.this, ClaimListActivity.class);
             	startActivity(intent);
@@ -75,7 +77,7 @@ public class AddClaimActivity extends Activity {
             	startActivity(intent);
             }
         });
-        //updateClaim();
+        updateClaim();
 	}
 	
 	private void populateFields() {

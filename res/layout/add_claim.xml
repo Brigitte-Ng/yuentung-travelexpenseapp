@@ -12,7 +12,7 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/startdatetext"
         android:ems="10"
-        android:hint="From (DD/MM/YYYY)"
+        android:hint="From (YYYY-MM-DD)"
         android:inputType="date" />
 
     <TextView
@@ -32,7 +32,7 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/enddatetext"
         android:ems="10"
-        android:hint="To (DD/MM/YYYY)"
+        android:hint="To (YYYY-MM-DD)"
         android:inputType="date" />
 
     <EditText
