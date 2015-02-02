@@ -41,7 +41,7 @@ public class ExpenseListActivity extends ListActivity {
 	private void fillData()
 	{
 
-		Cursor travelCursor = DbHelper.fetchAllClaims();
+		Cursor travelCursor = DbHelper.fetchAllExpenses();
 		startManagingCursor(travelCursor);
 
 		// Create an array to specify the fields we want to display in the list (Name only)

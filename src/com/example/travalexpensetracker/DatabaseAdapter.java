@@ -153,11 +153,18 @@ public class DatabaseAdapter {
 	 * @return Cursor over all notes
 	 */
 
-	public Cursor fetchAllClaims()
+	public Cursor fetchAllExpenses()
 	{
 
 		return Db.query(DATABASE_TABLE, new String[] {KEY_ROWID, KEY_EXPENSENAME, KEY_CAT, KEY_EXPENSEDATE,
-				KEY_SPENDING, KEY_CURRENCY, KEY_EXPENSEDESCRIPION, KEY_CLAIMNAME, KEY_CSTARTDATE, KEY_CENDDATE, KEY_CSTATUS, KEY_CLAIMDESCRIPTION},
+				KEY_SPENDING, KEY_CURRENCY, KEY_EXPENSEDESCRIPION},
+				null, null, null, null, null);
+	}
+	
+	public Cursor fetchAllClaims()
+	{
+
+		return Db.query(DATABASE_TABLE, new String[] {KEY_ROWID, KEY_CLAIMNAME, KEY_CSTARTDATE, KEY_CENDDATE, KEY_CSTATUS, KEY_CLAIMDESCRIPTION},
 				null, null, null, null, null);
 	}
 
