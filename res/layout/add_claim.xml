@@ -1,7 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:gravity="center" >
+
+    <EditText
+        android:id="@+id/claimstartdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/startdatetext"
+        android:ems="10"
+        android:hint="From (DD/MM/YYYY)"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/enddatetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/claimstartdate"
+        android:text="End Date:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/claimenddate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/enddatetext"
+        android:ems="10"
+        android:hint="To (DD/MM/YYYY)"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/claimdescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/submitclaim"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/claimstatus"
+        android:ems="10"
+        android:gravity="top|left"
+        android:hint="Description (e.g., destination and reason for travel)"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/claimstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/claimenddate"
+        android:ems="10"
+        android:hint="Status(in progress, submitted, returned, approved)" />
+
+    <Button
+        android:id="@+id/submitclaim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="addClaim"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/saveclaim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/submitclaim"
+        android:onClick="save"
+        android:text="Save" />
 
     <EditText
         android:id="@+id/claimname"
@@ -21,67 +97,5 @@
         android:layout_below="@+id/claimname"
         android:text="Start Date:"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <EditText
-        android:id="@+id/claimstartdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/startdatetext"
-        android:ems="10"
-        android:hint="Start Date (DD/MM/YYYY)" />
-
-    <TextView
-        android:id="@+id/enddatetext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/claimstartdate"
-        android:text="End Date:"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <EditText
-        android:id="@+id/claimenddate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/enddatetext"
-        android:ems="10"
-        android:hint="End Date (DD/MM/YYYY)" />
-
-    <Spinner
-        android:id="@+id/claimstatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/claimenddate" />
-
-    <Button
-        android:id="@+id/addclaim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:onClick="addClaim"
-        android:text="Add Claim Item" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/addclaim"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/claimstatus"
-        android:ems="10"
-        android:gravity="top|left"
-        android:hint="Description"
-        android:inputType="textMultiLine" >
-
-        <requestFocus />
-    </EditText>
 
 </RelativeLayout>

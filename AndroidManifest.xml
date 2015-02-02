@@ -38,6 +38,18 @@
             android:name="com.example.travalexpensetracker.AddExpenseActivity"
             android:label="@string/title_activity_add_expense" >
         </activity>
+        <activity
+            android:name="com.example.travalexpensetracker.Claim"
+            android:label="@string/title_activity_view_claim" >
+        </activity>
+        <activity
+            android:name="com.example.travalexpensetracker.ViewExpenseActivity"
+            android:label="@string/title_activity_view_expense" >
+        </activity>
+        <activity
+            android:name="com.example.travalexpensetracker.Expense"
+            android:label="@string/title_activity_view_expense" >
+        </activity>
     </application>
 
 </manifest>

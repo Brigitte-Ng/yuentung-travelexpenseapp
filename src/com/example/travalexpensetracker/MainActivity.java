@@ -24,12 +24,14 @@ public class MainActivity extends Activity {
         return true;
     }
     
+    //allows users to jump to list_claim.xml
     public void seeClaim(View v){
     	//Toast.makeText(this, "See Claim", Toast.LENGTH_SHORT).show();
     	Intent intent = new Intent(MainActivity.this, ClaimListActivity.class);
     	startActivity(intent);
     }
     
+  //allows users to jump to list_expense.xml
     public void seeExpense(View v){
     	//Toast.makeText(this, "See Expense", Toast.LENGTH_SHORT).show();
     	Intent intent = new Intent(MainActivity.this, ExpenseListActivity.class);

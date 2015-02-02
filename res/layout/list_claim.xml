@@ -14,7 +14,7 @@
         android:text="Add New Claim" />
 
     <ListView
-        android:id="@+id/claimlist"
+        android:id="@+id/android:list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/addclaim"

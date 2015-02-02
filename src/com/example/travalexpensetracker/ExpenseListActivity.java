@@ -1,5 +1,8 @@
 package com.example.travalexpensetracker;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -21,10 +24,37 @@ public class ExpenseListActivity extends Activity {
 		return true;
 	}
 	
+	//allows users to jump to add_expense.xml
 	public void addNewExpense(View v){
     	//Toast.makeText(this, "Add New Expense", Toast.LENGTH_SHORT).show();
     	Intent intent = new Intent(ExpenseListActivity.this, AddExpenseActivity.class);
     	startActivity(intent);
     }
+	
+	protected ArrayList<Expense> expenseList;
+	
+	public ExpenseListActivity(){
+		expenseList = new ArrayList<Expense>();
+	}
+
+	public Collection<Expense> getExpense() {
+		// TODO Auto-generated method stub
+		return expenseList;
+	}
+
+	public void addClaim(Expense Expense) {
+		// TODO Auto-generated method stub
+		expenseList.add(Expense);
+	}
+
+	public void removeClaim(int index) {
+		// TODO Auto-generated method stub
+		expenseList.remove(index);
+	}
+
+	public Expense chooseExpense(int index) {
+		// TODO Auto-generated method stub
+		return expenseList.get(index);
+	}
 
 }

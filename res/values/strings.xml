@@ -8,5 +8,7 @@
     <string name="title_activity_claim_list">Claim List</string>
     <string name="title_activity_add_claim">Add Claim</string>
     <string name="title_activity_add_expense">Add Expense</string>
+    <string name="title_activity_view_claim">View Claim</string>
+    <string name="title_activity_view_expense">View Expense</string>
 
 </resources>
