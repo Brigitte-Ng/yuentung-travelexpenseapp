@@ -24,7 +24,7 @@ public class DatabaseAdapter {
 	public static final String KEY_EXPENSEDESCRIPION = "expense_description";
 	
 	public static final String KEY_CLAIMNAME = "claim_name";
-	public static final String KEY_CSTARTDAE = "cstartdate";
+	public static final String KEY_CSTARTDATE = "cstartdate";
 	public static final String KEY_CENDDATE = "cenddate";
 	public static final String KEY_CSTATUS = "cstatus";
 	public static final String KEY_CLAIMDESCRIPTION = "claim_description";
@@ -111,7 +111,7 @@ public class DatabaseAdapter {
 		ContentValues initialValues = new ContentValues();
 		
 		initialValues.put(KEY_CLAIMNAME, claim_name);
-		initialValues.put(KEY_CSTARTDAE, cstartdate);
+		initialValues.put(KEY_CSTARTDATE, cstartdate);
 		initialValues.put(KEY_CENDDATE, cenddate);
 		initialValues.put(KEY_CSTATUS, cstatus);
 		initialValues.put(KEY_CLAIMDESCRIPTION, claim_description);
@@ -157,7 +157,7 @@ public class DatabaseAdapter {
 	{
 
 		return Db.query(DATABASE_TABLE, new String[] {KEY_ROWID, KEY_EXPENSENAME, KEY_CAT, KEY_EXPENSEDATE,
-				KEY_SPENDING, KEY_CURRENCY, KEY_EXPENSEDESCRIPION, KEY_CLAIMNAME, KEY_CSTARTDAE, KEY_CENDDATE, KEY_CSTATUS, KEY_CLAIMDESCRIPTION},
+				KEY_SPENDING, KEY_CURRENCY, KEY_EXPENSEDESCRIPION, KEY_CLAIMNAME, KEY_CSTARTDATE, KEY_CENDDATE, KEY_CSTATUS, KEY_CLAIMDESCRIPTION},
 				null, null, null, null, null);
 	}
 
@@ -194,7 +194,7 @@ public class DatabaseAdapter {
 		Cursor mCursor =
 
 		Db.query(true, DATABASE_TABLE, new String[] {KEY_ROWID, KEY_EXPENSENAME, KEY_CAT, KEY_EXPENSEDATE,
-				KEY_SPENDING, KEY_CURRENCY, KEY_EXPENSEDESCRIPION, KEY_CSTARTDAE, KEY_CENDDATE, KEY_CSTATUS, KEY_CLAIMDESCRIPTION}, 
+				KEY_SPENDING, KEY_CURRENCY, KEY_EXPENSEDESCRIPION, KEY_CSTARTDATE, KEY_CENDDATE, KEY_CSTATUS, KEY_CLAIMDESCRIPTION}, 
 				KEY_ROWID + "=" + rowId, null, null, null, null,null);
 
 		if (mCursor != null)
@@ -224,7 +224,7 @@ public class DatabaseAdapter {
 		ContentValues args = new ContentValues();
 		
 		args.put(KEY_CLAIMNAME, claim_name);
-		args.put(KEY_CSTARTDAE, cstartdate);
+		args.put(KEY_CSTARTDATE, cstartdate);
 		args.put(KEY_CENDDATE, cenddate);
 		args.put(KEY_CSTATUS, cstatus);
 		args.put(KEY_CLAIMDESCRIPTION, claim_description);

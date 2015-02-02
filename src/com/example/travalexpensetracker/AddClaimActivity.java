@@ -85,7 +85,7 @@ public class AddClaimActivity extends Activity {
             name.setText(claim.getString(
             		claim.getColumnIndexOrThrow(DatabaseAdapter.KEY_CLAIMNAME)));
             startdate.setText(claim.getString(
-                    claim.getColumnIndexOrThrow(DatabaseAdapter.KEY_CSTARTDAE)));
+                    claim.getColumnIndexOrThrow(DatabaseAdapter.KEY_CSTARTDATE)));
             enddate.setText(claim.getString(
                     claim.getColumnIndexOrThrow(DatabaseAdapter.KEY_CENDDATE)));
             status.setText(claim.getString(

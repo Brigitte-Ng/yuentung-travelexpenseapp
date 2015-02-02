@@ -53,7 +53,7 @@ public class ClaimListActivity extends ListActivity{
 		startManagingCursor(travelCursor);
 
 		// Create an array to specify the fields we want to display in the list (Name only)
-		String[] from = new String[] { DatabaseAdapter.KEY_EXPENSENAME, DatabaseAdapter.KEY_EXPENSEDATE };
+		String[] from = new String[] { DatabaseAdapter.KEY_CLAIMNAME, DatabaseAdapter.KEY_CSTARTDATE, DatabaseAdapter.KEY_CENDDATE };
 
 		// and an array of the fields we want to bind those fields to (in this
 		// case just text1)
