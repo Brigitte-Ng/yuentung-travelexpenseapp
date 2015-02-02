@@ -19,13 +19,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Date (DD/MM/YYYY)"
+        android:hint="Date (YYYY-MM-DD)"
         android:inputType="date" />
 
-    <Spinner
+    <EditText
         android:id="@+id/expensecategory"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Category" />
 
     <EditText
         android:id="@+id/expenseamount"
@@ -35,10 +37,12 @@
         android:hint="Amount"
         android:inputType="numberDecimal" />
 
-    <Spinner
+    <EditText
         android:id="@+id/expensecurrency"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Currencey" />
 
     <EditText
         android:id="@+id/expensedescription"
