@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
 public class ClaimListActivity extends ListActivity{
@@ -69,6 +70,16 @@ public class ClaimListActivity extends ListActivity{
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.claim_list, menu);
 		return true;
+	}
+	
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id)
+	{
+
+		super.onListItemClick(l, v, position, id);
+		Intent i = new Intent(this, AddClaimActivity.class);
+		i.putExtra(DatabaseAdapter.KEY_ROWID, id);
+		startActivity(i);
 	}
 	
 	/**protected ArrayList<Claim> claimList;

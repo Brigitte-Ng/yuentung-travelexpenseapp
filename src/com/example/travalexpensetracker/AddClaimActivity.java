@@ -62,7 +62,7 @@ public class AddClaimActivity extends Activity {
                 setResult(RESULT_OK);
                 finish();
                 //status.setText("in progress");
-                //updateClaim();
+                updateClaim();
             	Intent intent = new Intent(AddClaimActivity.this, ClaimListActivity.class);
             	startActivity(intent);
             }
@@ -72,12 +72,12 @@ public class AddClaimActivity extends Activity {
                 setResult(RESULT_OK);
                 finish();
                 status.setText("submitted");
-                //updateClaim();
+                updateClaim();
             	Intent intent = new Intent(AddClaimActivity.this, ClaimListActivity.class);
             	startActivity(intent);
             }
         });
-        updateClaim();
+        //updateClaim();
 	}
 	
 	private void populateFields() {
@@ -110,19 +110,15 @@ public class AddClaimActivity extends Activity {
 		 String cenddate = enddate.getText().toString();
 		 String cstatus = status.getText().toString();
 		 String cdescription = description.getText().toString();
-		    
-	     Date d =Calendar.getInstance().getTime();
-	     DateFormat dateF= new SimpleDateFormat("yyyy-mm-dd");
-	     String cstartdateD= dateF.format(d);
-	     String cenddateD= dateF.format(d);
+		  
 	      
 	     if (mRowId == null) {
-	        long id = DbHelper.createClaim(cname, cstartdateD,cenddateD, cstatus, cdescription);
+	        long id = DbHelper.createClaim(cname, cstartdate,cenddate, cstatus, cdescription);
 	         if (id > 0) {
 	             mRowId = id;
 	         }
 	     } else {
-	         DbHelper.updateClaim(mRowId, cname, cstartdateD,cenddateD, cstatus, cdescription);
+	         DbHelper.updateClaim(mRowId, cname, cstartdate,cenddate, cstatus, cdescription);
 	     }
 	    }
 	

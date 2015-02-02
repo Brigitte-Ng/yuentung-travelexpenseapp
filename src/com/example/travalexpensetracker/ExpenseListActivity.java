@@ -11,6 +11,7 @@ import android.database.Cursor;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
 public class ExpenseListActivity extends ListActivity {
@@ -69,7 +70,17 @@ public class ExpenseListActivity extends ListActivity {
     	startActivity(intent);
     }
 	
-	protected ArrayList<Expense> expenseList;
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id)
+	{
+
+		super.onListItemClick(l, v, position, id);
+		Intent i = new Intent(this, AddExpenseActivity.class);
+		i.putExtra(DatabaseAdapter.KEY_ROWID, id);
+		startActivity(i);
+	}
+	
+	/**protected ArrayList<Expense> expenseList;
 	
 	public ExpenseListActivity(){
 		expenseList = new ArrayList<Expense>();
@@ -93,6 +104,6 @@ public class ExpenseListActivity extends ListActivity {
 	public Expense chooseExpense(int index) {
 		// TODO Auto-generated method stub
 		return expenseList.get(index);
-	}
+	}**/
 
 }

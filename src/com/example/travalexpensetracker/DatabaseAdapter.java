@@ -179,6 +179,24 @@ public class DatabaseAdapter {
 		return body;
 	}
 
+	public ArrayList<String> fetchexpense(){
+
+		Cursor c = Db.rawQuery("SELECT expense_name, category, expense_date, spending, currency, expense_description FROM " + DATABASE_TABLE + " where NOT(expense_date = NULL)", null);
+
+		if (c.moveToFirst())
+		{
+
+			for (int i = 0; i < c.getCount(); i++)
+			{
+
+				body.add(c.getString(2));
+				c.moveToNext();
+			}
+		}
+		//c.close();
+		return body;
+	}
+	
 	/**
 	 * Return a Cursor positioned at the note that matches the given rowId
 	 * 
@@ -194,7 +212,7 @@ public class DatabaseAdapter {
 		Cursor mCursor =
 
 		Db.query(true, DATABASE_TABLE, new String[] {KEY_ROWID, KEY_EXPENSENAME, KEY_CAT, KEY_EXPENSEDATE,
-				KEY_SPENDING, KEY_CURRENCY, KEY_EXPENSEDESCRIPION, KEY_CSTARTDATE, KEY_CENDDATE, KEY_CSTATUS, KEY_CLAIMDESCRIPTION}, 
+				KEY_SPENDING, KEY_CURRENCY, KEY_EXPENSEDESCRIPION,KEY_CLAIMNAME, KEY_CSTARTDATE, KEY_CENDDATE, KEY_CSTATUS, KEY_CLAIMDESCRIPTION}, 
 				KEY_ROWID + "=" + rowId, null, null, null, null,null);
 
 		if (mCursor != null)
