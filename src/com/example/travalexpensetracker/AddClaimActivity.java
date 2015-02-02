@@ -60,7 +60,7 @@ public class AddClaimActivity extends Activity {
                 setResult(RESULT_OK);
                 finish();
                 status.setText("in progress");
-                updateClaim();
+                //updateClaim();
             	Intent intent = new Intent(AddClaimActivity.this, ClaimListActivity.class);
             	startActivity(intent);
             }
@@ -70,11 +70,12 @@ public class AddClaimActivity extends Activity {
                 setResult(RESULT_OK);
                 finish();
                 status.setText("submitted");
-                updateClaim();
+                //updateClaim();
             	Intent intent = new Intent(AddClaimActivity.this, ClaimListActivity.class);
             	startActivity(intent);
             }
         });
+        //updateClaim();
 	}
 	
 	private void populateFields() {
